@@ -1,11 +1,9 @@
 <template>
-  <div :style="{display: ready ? 'block' : 'none'}">
-    <modal name="hello-modal">
-      <div class="container">
-        Hello!
-      </div>
-    </modal>
-  </div>
+  <modal name="hello-modal">
+    <div class="container">
+      Hello!
+    </div>
+  </modal>
 </template>
 
 <script>
@@ -16,19 +14,13 @@ import { ModalEvent } from "./ModalEvent"
 Vue.use(VModal)
 
 export default {
-  data(){
-    return {
-      ready: false
-    }
-  },
-  mounted(){
-    console.log(this.$slots)
-    this.ready = true
+  created(){
     ModalEvent.$on("openModal", () => {
       this.$modal.show("hello-modal")
     })
   }
 }
+
 </script>
 <style scoped>
 .container{

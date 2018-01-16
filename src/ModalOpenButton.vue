@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot @click="onClick"></slot>
+    <button @click="onClick">Open from Vue</button>
   </div>
 </template>
 
