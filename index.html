@@ -12,10 +12,21 @@
         <button>Open from Vue</button>
       </modal-open-button>
       <div>
-        <button id="external-button">Open from jQuery</button>
+        <button id="jquery-external-button">Open from jQuery</button>
+      </div>
+      <div>
+        <button id="vanilla-external-button">Open from Vanilla</button>
       </div>
       <hello-modal></hello-modal>
     </div>
     <!-- built files will be auto injected -->
+    <script>
+      document.onreadystatechange = function(){
+        var elm = document.getElementById("vanilla-external-button");
+        elm.onclick = function(){
+          window.ModalEvent.$emit("openModal");
+        }
+      }
+    </script>
   </body>
 </html>
