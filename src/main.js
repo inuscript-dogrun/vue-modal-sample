@@ -4,6 +4,7 @@ import Vue from "vue"
 import App from "./App"
 import HelloModal from "./HelloModal"
 import ModalOpenButton from "./ModalOpenButton"
+import "./jquery-hook"
 
 Vue.config.productionTip = false
 

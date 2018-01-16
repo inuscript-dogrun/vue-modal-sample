@@ -3,13 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
     <title>vue-modal-sample</title>
   </head>
   <body>
     <div id="app">
-      <modal-open-button></modal-open-button>
+      <modal-open-button>
+        <button>Open from Vue</button>
+      </modal-open-button>
+      <div>
+        <button id="external-button">Open from jQuery</button>
+      </div>
       <hello-modal></hello-modal>
-
     </div>
     <!-- built files will be auto injected -->
   </body>

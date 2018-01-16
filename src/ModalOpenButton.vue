@@ -1,7 +1,7 @@
 <template>
-  <button @click="onClick">
-    Open Modal
-  </button>
+  <div>
+    <slot @click="onClick"></slot>
+  </div>
 </template>
 
 <script>
